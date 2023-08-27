@@ -9,7 +9,7 @@ class CoinGeckoCoinResponse: ImmutableMappable {
     let tickers: [MarketTickerRaw]
 
     private let smartContractRegex = try! NSRegularExpression(pattern: "^0[xX][A-z0-9]+$")
-    private let smartContractPlatforms = ["tron", "ethereum", "eos", "binance-smart-chain", "binancecoin"]
+    private let smartContractPlatforms = ["tron", "ethereum", "eos", "binance-smart-chain", "binancecoin", "fantom", "avalanche"]
 
     public var exchangeIds: [String] {
         tickers.map { $0.marketId }
